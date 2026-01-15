@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProfitLand - Coming Soon</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0a0a12;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(ellipse at 30% 20%, rgba(232, 90, 25, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 80%, rgba(232, 90, 25, 0.1) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(232, 90, 25, 0.05) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        
+        body::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                linear-gradient(rgba(232, 90, 25, 0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(232, 90, 25, 0.02) 1px, transparent 1px);
+            background-size: 80px 80px;
+            pointer-events: none;
+        }
+        
+        .container {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            padding: 40px;
+            max-width: 900px;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: rgba(232, 90, 25, 0.2);
+            border: 1px solid rgba(232, 90, 25, 0.4);
+            color: #e85a19;
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 20px rgba(232, 90, 25, 0.3); }
+            50% { box-shadow: 0 0 40px rgba(232, 90, 25, 0.6); }
+        }
+        
+        .logo {
+            font-size: 80px;
+            font-weight: 700;
+            color: #e85a19;
+            margin-bottom: 20px;
+            text-shadow: 0 0 60px rgba(232, 90, 25, 0.5);
+            letter-spacing: 4px;
+        }
+        
+        .tagline {
+            font-size: 28px;
+            color: #ffffff;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+        
+        .subtitle {
+            font-size: 18px;
+            color: #888;
+            margin-bottom: 60px;
+            line-height: 1.6;
+        }
+        
+        .stats-box {
+            background: rgba(15, 15, 25, 0.9);
+            border: 1px solid rgba(232, 90, 25, 0.2);
+            border-radius: 20px;
+            padding: 50px 60px;
+            margin-bottom: 50px;
+            display: inline-block;
+        }
+        
+        .stats-grid {
+            display: flex;
+            gap: 80px;
+            justify-content: center;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 64px;
+            font-weight: 700;
+            color: #e85a19;
+            line-height: 1;
+            text-shadow: 0 0 40px rgba(232, 90, 25, 0.4);
+        }
+        
+        .stat-label {
+            font-size: 15px;
+            color: #aaa;
+            margin-top: 15px;
+            letter-spacing: 1px;
+        }
+        
+        .highlights {
+            font-size: 18px;
+            color: #e85a19;
+            margin-bottom: 50px;
+            font-style: italic;
+        }
+        
+        .status {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 40px;
+        }
+        
+        .status-dot {
+            width: 12px;
+            height: 12px;
+            background: #28a745;
+            border-radius: 50%;
+            animation: blink 1.5s ease-in-out infinite;
+        }
+        
+        @keyframes blink {
+            0%, 100% { opacity: 1; box-shadow: 0 0 10px #28a745; }
+            50% { opacity: 0.5; box-shadow: 0 0 20px #28a745; }
+        }
+        
+        .status-text {
+            font-size: 16px;
+            color: #28a745;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+        
+        .website {
+            font-size: 24px;
+            color: #e85a19;
+            font-weight: 600;
+            margin-top: 20px;
+            text-shadow: 0 0 30px rgba(232, 90, 25, 0.3);
+        }
+        
+        .footer {
+            margin-top: 60px;
+            font-size: 14px;
+            color: #555;
+        }
+        
+        @media (max-width: 768px) {
+            .logo { font-size: 48px; }
+            .tagline { font-size: 22px; }
+            .stats-grid { flex-direction: column; gap: 40px; }
+            .stats-box { padding: 30px 40px; }
+            .stat-value { font-size: 48px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="badge">Coming Soon</div>
+        
+        <div class="logo">PROFITLAND</div>
+        
+        <div class="tagline">Advanced Algorithmic Trading Platform</div>
+        
+        <div class="subtitle">AI-powered cryptocurrency trading with automated grid strategies</div>
+        
+        <div class="stats-box">
+            <div class="stats-grid">
+                <div class="stat">
+                    <div class="stat-value">100%</div>
+                    <div class="stat-label">Win Rate</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">133</div>
+                    <div class="stat-label">Winning Trades</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">0</div>
+                    <div class="stat-label">Losses</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="highlights">Zero Losses • Proven Results • Consistent Returns</div>
+        
+        <div class="status">
+            <div class="status-dot"></div>
+            <div class="status-text">IN ACTIVE TESTING & DEVELOPMENT</div>
+        </div>
+        
+        <div class="website">www.profitland.io</div>
+        
+        <div class="footer">Join the future of algorithmic trading</div>
+    </div>
+</body>
+</html>
