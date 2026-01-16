@@ -603,12 +603,17 @@
         /* MOBILE RESPONSIVE */
         @media (max-width: 768px) {
             .slide { 
-                padding: 50px 20px; 
-                min-height: auto;
-                height: auto;
+                padding: 25px 15px; 
+                min-height: 100vh;
+                height: 100vh;
+                overflow: hidden;
             }
             
-            .content { padding: 0 10px; }
+            .content { 
+                padding: 0 5px;
+                transform: scale(0.92);
+                transform-origin: center center;
+            }
             
             /* Cover slide */
             .coming-soon-badge {
@@ -633,10 +638,10 @@
                 padding: 0 10px;
             }
             
-            .status { margin-top: 40px !important; }
-            .status-text { font-size: 12px; letter-spacing: 2px; }
+            .status { margin-top: 25px !important; }
+            .status-text { font-size: 11px; letter-spacing: 2px; }
             
-            .footer-text { font-size: 14px; }
+            .footer-text { font-size: 13px; margin-top: 20px !important; }
             
             /* Titles */
             .slide-title { 
@@ -648,7 +653,7 @@
             .slide-subtitle { 
                 font-size: 14px; 
                 padding: 0 10px;
-                margin-bottom: 30px;
+                margin-bottom: 20px;
             }
             
             /* Stats grid */
@@ -669,18 +674,18 @@
             
             /* Highlight number */
             .highlight-number { 
-                font-size: 60px; 
-                margin: 30px 0;
+                font-size: 55px; 
+                margin: 20px 0;
             }
             
-            .highlight-label { font-size: 16px; }
+            .highlight-label { font-size: 15px; }
             
-            .note { font-size: 13px; }
+            .note { font-size: 12px; margin-top: 15px; }
             
             /* Content rows */
             .content-row { 
                 flex-direction: column; 
-                gap: 30px;
+                gap: 20px;
             }
             
             .screenshot { 
@@ -776,11 +781,21 @@
         
         /* SMALL MOBILE */
         @media (max-width: 480px) {
-            .slide { padding: 40px 15px; }
+            .slide { 
+                padding: 20px 10px;
+                min-height: 100vh;
+                height: 100vh;
+                overflow: hidden;
+            }
+            
+            .content { 
+                transform: scale(0.85);
+                transform-origin: center center;
+            }
             
             .coming-soon-badge {
-                padding: 14px 25px;
-                font-size: 14px;
+                padding: 12px 22px;
+                font-size: 13px;
                 letter-spacing: 2px;
             }
             
