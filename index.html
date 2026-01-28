@@ -1017,13 +1017,16 @@
         /* MOBILE RESPONSIVE */
         @media (max-width: 768px) {
             html {
-                scroll-snap-type: y proximity;
+                scroll-snap-type: none;
+                scroll-behavior: auto;
             }
-
+            
             .slide {
                 padding: 40px 20px;
                 height: auto;
                 min-height: 100vh;
+                scroll-snap-align: none;
+                scroll-snap-stop: normal;
             }
 
             .content {
